@@ -81,8 +81,8 @@ async function insertionSort() {
       let j;
   
       for (j = i - 1; j >= 0 && ARRAY[j] > el; j--) {
-        highlightItem(i + 1, 'red');
         ARRAY[j + 1] = ARRAY[j];
+        highlightItem(j + 1, 'red');
         await displayArray();
       }
       ARRAY[j + 1] = el;
